@@ -14,6 +14,9 @@ document.addEventListener('contextmenu', e => {
 
     if (x > (winWidth - cmWidth - shareMenu.offsetWidth)) {
         shareMenu.style.left = "-200px";
+    } else {
+        shareMenu.style.left = "";
+        shareMenu.style.right = "-200px";
     }
 
     x = x > winWidth - cmWidth ? winWidth - cmWidth : x;
@@ -24,3 +27,5 @@ document.addEventListener('contextmenu', e => {
 
     contextMenu.style.visibility = 'visible';
 });
+
+document.addEventListener('click', () => contextMenu.style.visibility = 'hidden');
